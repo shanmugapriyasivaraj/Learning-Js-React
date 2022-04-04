@@ -76,9 +76,40 @@
 
 // map , filter
 
+// const students = [
+//   { name: "Priya", active: true },
+//   { name: "Kavi", active: false },
+// ];
+// console.log(students.map((st) => "Hy" + st.name));
+// console.log(students.filter((st) => st.active === true));
+
+// Destructuring -------
+
+// Object Destructuring
+
+const person = {
+  firstName: "Guvi",
+  lastName: "Geeks",
+};
+
+const { firstName: fName, lastName: lName } = person;
+
+console.log(fName, lName);
+
+// Array Destructuring
+
 const students = [
   { name: "Priya", active: true },
   { name: "Kavi", active: false },
 ];
-console.log(students.map((st) => "Hy" + st.name));
-console.log(students.filter((st) => st.active === true));
+
+// normal
+// const stud1 = students[0];
+// const stud2 = students[1];
+
+// console.log(stud1, stud2);
+
+// destructuring
+
+const [stud1, stud2] = students;
+console.log(stud1, stud2);
