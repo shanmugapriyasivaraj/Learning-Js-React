@@ -61,13 +61,24 @@
 
 // Arrow Function ----
 
-const person = {
-  firstName: "Guvi",
-  lastName: "Geeks",
-  getName() {
-    setTimeout(() => {
-      console.log(this);
-    }, 2000);
-  },
-};
-person.getName();
+// const person = {
+//   firstName: "Guvi",
+//   lastName: "Geeks",
+//   getName() {
+//     setTimeout(() => {
+//       console.log(this);
+//     }, 2000);
+//   },
+// };
+// person.getName();
+
+// Array Function ----
+
+// map , filter
+
+const students = [
+  { name: "Priya", active: true },
+  { name: "Kavi", active: false },
+];
+console.log(students.map((st) => "Hy" + st.name));
+console.log(students.filter((st) => st.active === true));
