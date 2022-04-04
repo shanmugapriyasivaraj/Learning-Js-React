@@ -87,29 +87,42 @@
 
 // Object Destructuring
 
-const person = {
-  firstName: "Guvi",
-  lastName: "Geeks",
-};
+// const person = {
+//   firstName: "Guvi",
+//   lastName: "Geeks",
+// };
 
-const { firstName: fName, lastName: lName } = person;
+// const { firstName: fName, lastName: lName } = person;
 
-console.log(fName, lName);
+// console.log(fName, lName);
 
-// Array Destructuring
+// // Array Destructuring
 
-const students = [
-  { name: "Priya", active: true },
-  { name: "Kavi", active: false },
-];
+// const students = [
+//   { name: "Priya", active: true },
+//   { name: "Kavi", active: false },
+// ];
 
-// normal
-// const stud1 = students[0];
-// const stud2 = students[1];
+// // normal
+// // const stud1 = students[0];
+// // const stud2 = students[1];
 
+// // console.log(stud1, stud2);
+
+// // destructuring
+
+// const [stud1, stud2] = students;
 // console.log(stud1, stud2);
 
-// destructuring
+// Spread Operator -----
 
-const [stud1, stud2] = students;
-console.log(stud1, stud2);
+const obj1 = { name: "Guvi", age: 7 };
+
+const obj2 = { ...obj1, city: "chennai" };
+
+console.log(obj2);
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = [...arr1, 5, 6, 7, 8];
+
+console.log(arr2);
