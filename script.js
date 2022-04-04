@@ -116,13 +116,40 @@
 
 // Spread Operator -----
 
-const obj1 = { name: "Guvi", age: 7 };
+// const obj1 = { name: "Guvi", age: 7 };
 
-const obj2 = { ...obj1, city: "chennai" };
+// const obj2 = { ...obj1, city: "chennai" };
 
-console.log(obj2);
+// console.log(obj2);
 
-const arr1 = [1, 2, 3, 4];
-const arr2 = [...arr1, 5, 6, 7, 8];
+// const arr1 = [1, 2, 3, 4];
+// const arr2 = [...arr1, 5, 6, 7, 8];
 
-console.log(arr2);
+// console.log(arr2);
+
+// Async And await
+
+// promise
+function isEven(num) {
+  return new Promise((resolve, reject) => {
+    if (num % 2) reject("Odd");
+    else return resolve("Even");
+  });
+}
+// Async Function
+async function computeEven() {
+  try {
+    let msg = await isEven(2);
+    console.log(msg);
+    msg = await isEven(3);
+    console.log(msg);
+    msg = await isEven(4);
+    console.log(msg);
+    msg = await isEven(5);
+    console.log(msg);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+computeEven();
