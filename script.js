@@ -179,15 +179,12 @@
 // };
 
 // Parent/Super class
-class Person {
-  constructor(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-  }
-  getName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
+
+// inheritance----
+// Child class/sub class
+
+import Person from "./person";
+import Student from "./student";
 
 const person1 = new Person("Guvi", "Geeks");
 const person2 = new Person("Nithya", "Varun");
@@ -197,8 +194,6 @@ console.log(person1.getName());
 console.log(person2.getName());
 console.log(person3.getName());
 
-// inheritance----
-// Child class/sub class
 class Mentor extends Person {
   constructor(firstName, lastName, experience) {
     super(firstName, lastName);
@@ -209,9 +204,9 @@ class Mentor extends Person {
     return this.experience;
   }
 }
-// const student = new Student("priya", "Anu", "React");
-// console.log(student.getName());
-// console.log(student.getCourse());
+const student = new Student("priya", "Anu", "React");
+console.log(student.getName());
+console.log(student.getCourse());
 
 const mentor = new Mentor("Guvi", "Geeks", 25);
 console.log(mentor.getName());
