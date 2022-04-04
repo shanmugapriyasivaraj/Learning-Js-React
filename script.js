@@ -37,24 +37,37 @@
 
 // OBJECTS---
 
+// const person = {
+//   firstName: "Guvi",
+//   lastName: "Geeks",
+//   getName() {
+//     console.log(this);
+//   },
+// };
+// const person2 = {
+//   firstName: "Guvi2",
+//   lastName: "Geeks2",
+// };
+// console.log(person.firstName); //[Dot Operator]
+
+// const key = "lastName";
+
+// console.log(person[key]);
+
+// person.getName();
+
+// const name = person.getName.bind(person2);
+// name();
+
+// Arrow Function ----
+
 const person = {
   firstName: "Guvi",
   lastName: "Geeks",
   getName() {
-    console.log(this);
+    setTimeout(() => {
+      console.log(this);
+    }, 2000);
   },
 };
-const person2 = {
-  firstName: "Guvi2",
-  lastName: "Geeks2",
-};
-console.log(person.firstName); //[Dot Operator]
-
-const key = "lastName";
-
-console.log(person[key]);
-
 person.getName();
-
-const name = person.getName.bind(person2);
-name();
