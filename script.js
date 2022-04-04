@@ -130,26 +130,68 @@
 // Async And await
 
 // promise
-function isEven(num) {
-  return new Promise((resolve, reject) => {
-    if (num % 2) reject("Odd");
-    else return resolve("Even");
-  });
-}
-// Async Function
-async function computeEven() {
-  try {
-    let msg = await isEven(2);
-    console.log(msg);
-    msg = await isEven(3);
-    console.log(msg);
-    msg = await isEven(4);
-    console.log(msg);
-    msg = await isEven(5);
-    console.log(msg);
-  } catch (err) {
-    console.error(err);
+// function isEven(num) {
+//   return new Promise((resolve, reject) => {
+//     if (num % 2) reject("Odd");
+//     else return resolve("Even");
+//   });
+// }
+// // Async Function
+// async function computeEven() {
+//   try {
+//     let msg = await isEven(2);
+//     console.log(msg);
+//     msg = await isEven(3);
+//     console.log(msg);
+//     msg = await isEven(4);
+//     console.log(msg);
+//     msg = await isEven(5);
+//     console.log(msg);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+
+// computeEven();
+
+// Class ----
+
+// const person1 = {
+//   firstName: "Guvi",
+//   lastName: "Geeks",
+//   getName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// const person2 = {
+//   firstName: "varun",
+//   lastName: "Nithya",
+//   getName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// const person3 = {
+//   firstName: "Anu",
+//   lastName: "Pallavi",
+//   getName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  getName() {
+    return `${this.firstName} ${this.lastName}`;
   }
 }
 
-computeEven();
+const person1 = new Person("Guvi", "Geeks");
+const person2 = new Person("Nithya", "Varun");
+const person3 = new Person("Anu", "Pallavi");
+
+console.log(person1.getName());
+console.log(person2.getName());
+console.log(person3.getName());
